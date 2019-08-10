@@ -5,6 +5,12 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+    <!-- Angular -->
+    <script type="text/javascript" src="scripts/lib/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/common.js"></script>
+
+    <!-- Angular Script -->
+    <script type="text/javascript" src="scripts/modifyCat.js"></script>
 	<head>
 		<title>Admin: Modify Cat Details</title>
 		<meta charset="utf-8" />
@@ -15,230 +21,239 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
-		<!-- Wrapper -->
+            <div ng-app="myApp" ng-controller="catCtrl" class="container">
+                <!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-        <header id="header">
-          <h1><a href="index.html">Little Tails Cat Cafe</a></h1>
-          <nav class="links">
-            <ul>
-              <li><a href="gallery.html">Our Cats</a></li>
-              <li><a href="rules.html">Rules & Regulations</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>
-          <nav class="main">
-            <ul>
-              
-              <li class="menu">
-                <a class="fa-bars" href="#menu">Menu</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-<!-- Menu -->
-<section id="menu">
-
-
-  <!-- Links -->
-    <section>
-      <ul class="links">
-        
-        <li>
-          <a href="adoption.html">
-            <h2>Available Cats for Adoption</h2>
-            
-          </a>
-        </li>
-        <li>
-          <a href="registration.html">
-            <h2>Register to Adopt</h2>
-            
-          </a>
-        </li>
-      </ul>
-    </section>
-
-						<!-- Actions -->
-							<section>
-								<ul class="actions vertical">
-									<li><a href="login.html" class="button big fit">Log Out</a></li>
-								</ul>
-							</section>
-
-                    </section>
-                    
-                    <!-- Main -->
-					<div id="main">
-
-                            Cat Name: <input type="text" name="catname" value="Cat 1"  placeholder="Type cat name here...">
-                            <!--enter validation-->
-                            <br />
-                            Cat Description: <textarea name="catdesc"  placeholder="Type cat description here...">Blah blah blah descriptions here</textarea>
-                            <!--enter validation-->
-                            <br />
-                            Cat Gender: 
-                            <select name="gender">
-                                    <option value="Female">Female</option>
-                                    <option value="Male">Male</option>
-                                    </select>
-                            <br />
-                            Cat Age: <input type="text" name="catage" value="4 months" placeholder="Type cat age here...">
-                            <br />
-                            Date of Adoption: 
-                            <br/>
-                            <input type="date" name="adoptdate">
-                            <br />
-                            <br/>
-                        
-                            <input type="submit" name="btn_submit" value="Submit" onclick="goBack()">
-    
-                            <input type="reset" name="btn_reset" value="Reset">
-
-                        </div>
-
-                        <!-- Sidebar -->
-                            <section id="sidebar">
-        
-                                <!-- Intro -->
-                                    <section id="intro">
-                                        <a href="#" class="logo"></a>
-                                        <header>
-                                            <h3>Welcome to Singapore's first adoptable cat cafe!</h3>
-                                            <p>Meet our furry friends!</p>
-                                        </header>
-                                    </section>
-        
-                                
-        
-                                <!-- Posts List -->
-                                <section>
-                                        <ul class="posts">
-                                            <li>
-                                                <article>
-                                                    <header>
-                                                        <h3><a href="gallery.html">Kai Kai</a></h3>
-                                                        <time class="published" datetime="2015-10-20">
-                                                        Breed: Ginger Tabby (Male)
-                                                        Birthday: October 20
-                                                         </time>
-                                                    </header>
-                                                    <a href="gallery.html" class="image"><img src="images/pic08.jpg" alt="Kai Kai" /></a>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article>
-                                                    <header>
-                                                        <h3><a href="gallery.html">Jia Jia</a></h3>
-                                                        <time class="published" datetime="2015-10-10">Breed: Tortoise Shell (Female)
-                                                        
-                                                        Birthday: October 20</time>
-                                                    </header>
-                                                    <a href="gallery.html" class="image"><img src="images/pic09.jpg" alt="Jia Jia" /></a>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article>
-                                                    <header>
-                                                        <h3><a href="gallery.html">Snow</a></h3>
-                                                        <time class="published" datetime="2015-10-10">Breed: Pure White (Female)
-                                                        Birthday: April 30</time>
-                                                    </header>
-                                                    <a href="gallery.html" class="image"><img src="images/pic10.jpg" alt="Snow" /></a>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article>
-                                                    <header>
-                                                        <h3><a href="gallery.html">Dewey</a></h3>
-                                                        <time class="published" datetime="2015-10-08">Breed: Grey Tabby (Female)
-                                                        Birthday: May 30</time>
-                                                    </header> 
-                                                    <a href="gallery.html" class="image"><img src="images/pic11.jpg" alt="Dewey" /></a>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article>
-                                                    <header>
-                                                        <h3><a href="gallery.html">Chawy</a></h3>
-                                                        <time class="published" datetime="2015-10-06">Breed: Brown Tabby (Male)
-                                                        Birthday: May 30</time>
-                                                    </header>
-                                                    <a href="gallery.html" class="image"><img src="images/pic12.jpg" alt="Chawy" /></a>
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </section>
-        
-                                <!-- About -->
-                                    <section class="blurb">
-                                        <h2>Opening Hours</h2>
-                                        <p>Weekdays: 11am - 7pm</p>
-                                        <p>Weekends: 12pm - 9pm</p>
-                                        <p>Closed on Public Holidays</p>
-                                        
-                                        <h2>Admission Fee</h2>
-                                        <p>Children (Age 5 and above) : $10/ per hour</p>
-                                        <p>Adult : $15/ per Hour</p>
-                                    </section>
-        
-                                <!-- Footer -->
-                                    <section id="footer">
-                                        <ul class="icons">
-                                            <li><a href="https://www.facebook.com/" class="fa-facebook"><span class="label">Facebook</span></a></li>
-                                            <li><a href="https://www.instagram.com/?hl=en" class="fa-instagram"><span class="label">Instagram</span></a></li>
-                                        </ul>
-                                        <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">Little Tails Cat Cafe</a></p>
-                                    </section>
-        
-                            </section>
-        
-                    </div>
-        
-        <div class="sitemap-page-wrapper">
-                <ul class="sitemap-column">
-                    <li class="sitemap-column-head sitemap-positions">Services</li>
-                    <li class="sitemap-column-data"><a href="adoption.html">Adoption Services</a></li>
-                    
+                    <!-- Header -->
+            <header id="header">
+              <h1><a href="index.html">Little Tails Cat Cafe</a></h1>
+              <nav class="links">
+                <ul>
+                  <li><a href="gallery.html">Our Cats</a></li>
+                  <li><a href="rules.html">Rules & Regulations</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-                <ul class="sitemap-column">
-                    <li class="sitemap-column-head sitemap-employers">Admissions</li>
-                    <li class="sitemap-column-data"><a href="contact.html">Cat Cafe Admissions</a></li>
+              </nav>
+              <nav class="main">
+                <ul>
                   
-                   
+                  <li class="menu">
+                    <a class="fa-bars" href="#menu">Menu</a>
+                  </li>
                 </ul>
-                <ul class="sitemap-column sitemap-students">
-                    <li class="sitemap-column-head">Cafe Rules</li>
-                    <li class="sitemap-column-data"><a href="rules.html">Rules and Regulations</a></li>
-                 
-                 </ul>
-                <ul class="sitemap-column sitemap-universities">
-                    <li class="sitemap-column-head">Industry Partners</li>
-                    <li class="sitemap-column-data"><a href="http://petloverscentre.com/Forms/Index.aspx">Pet Lover's Centre</a></li>
-                    <li class="sitemap-column-data"><a href="http://catwelfare.org/">Cat Welfare Society</a></li>
-                    <li class="sitemap-column-data"><a href="https://www.friskies.com/">Purina Friskies</a></li>
-                   
-                </ul>
-                <ul class="sitemap-column sitemap-about">
-                    <li class="sitemap-column-head">Get in Touch</li>
-                    <li class="sitemap-column-data"><a href="index.html">Home</a></li>
-                    <li class="sitemap-column-data"><a href="contact.html">Contact Us</a></li>
-                 
-                </ul>
-                <ul class="sitemap-column sitemap-home">
-                   <li class="sitemap-column-head">Social Media</li>
-                    <li class="sitemap-column-data"><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </div>
+              </nav>
+            </header>
+    <!-- Menu -->
+    <section id="menu">
+    
+    
+      <!-- Links -->
+        <section>
+          <ul class="links">
+            
+            <li>
+              <a href="adoption.html">
+                <h2>Available Cats for Adoption</h2>
+                
+              </a>
+            </li>
+            <li>
+              <a href="registration.html">
+                <h2>Register to Adopt</h2>
+                
+              </a>
+            </li>
+          </ul>
+        </section>
+    
+                            <!-- Actions -->
+                                <section>
+                                    <ul class="actions vertical">
+                                        <li><a href="login.html" class="button big fit">Log Out</a></li>
+                                    </ul>
+                                </section>
+    
+                        </section>
+                        <div id="main" ng-hide="showForm">
+                            <table>
+                                <tr ng-repeat="cat in catsss">
+                                    <td>
+                                        {{cat.name}}
+                                    </td>
+                                    <td>
+                                        <button ng-click="reviewForm(cat)">Review</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Main -->
+                        <div id="main" ng-hide="!showForm">
+    
+                                Cat Name: <input type="text" name="catname" value="Cat 1"  ng-model="formObj.name" placeholder="Type cat name here...">
+                                <!--enter validation-->
+                                <br />
+                                Cat Description: <textarea name="catdesc"  ng-model="formObj.desc" placeholder="Type cat description here...">Blah blah blah descriptions here</textarea>
+                                <!--enter validation-->
+                                <br />
+                                Cat Gender: 
+                                <select name="gender">
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                        </select>
+                                <br />
+                                Cat Age: <input type="text" name="catage" value="4 months" ng-model="formObj.age" placeholder="Type cat age here...">
+                                <br />
+                                <br/>
+                            
+                                <input type="submit" name="btn_submit" value="Submit" ng-click="editCatProfile()">
+        
+                                <input type="reset" name="btn_reset" value="Reset">
+    
+                            </div>
+    
+                            <!-- Sidebar -->
+                                <section id="sidebar">
+            
+                                    <!-- Intro -->
+                                        <section id="intro">
+                                            <a href="#" class="logo"></a>
+                                            <header>
+                                                <h3>Welcome to Singapore's first adoptable cat cafe!</h3>
+                                                <p>Meet our furry friends!</p>
+                                            </header>
+                                        </section>
+            
+                                    
+            
+                                    <!-- Posts List -->
+                                    <section>
+                                            <ul class="posts">
+                                                <li>
+                                                    <article>
+                                                        <header>
+                                                            <h3><a href="gallery.html">Kai Kai</a></h3>
+                                                            <time class="published" datetime="2015-10-20">
+                                                            Breed: Ginger Tabby (Male)
+                                                            Birthday: October 20
+                                                             </time>
+                                                        </header>
+                                                        <a href="gallery.html" class="image"><img src="images/pic08.jpg" alt="Kai Kai" /></a>
+                                                    </article>
+                                                </li>
+                                                <li>
+                                                    <article>
+                                                        <header>
+                                                            <h3><a href="gallery.html">Jia Jia</a></h3>
+                                                            <time class="published" datetime="2015-10-10">Breed: Tortoise Shell (Female)
+                                                            
+                                                            Birthday: October 20</time>
+                                                        </header>
+                                                        <a href="gallery.html" class="image"><img src="images/pic09.jpg" alt="Jia Jia" /></a>
+                                                    </article>
+                                                </li>
+                                                <li>
+                                                    <article>
+                                                        <header>
+                                                            <h3><a href="gallery.html">Snow</a></h3>
+                                                            <time class="published" datetime="2015-10-10">Breed: Pure White (Female)
+                                                            Birthday: April 30</time>
+                                                        </header>
+                                                        <a href="gallery.html" class="image"><img src="images/pic10.jpg" alt="Snow" /></a>
+                                                    </article>
+                                                </li>
+                                                <li>
+                                                    <article>
+                                                        <header>
+                                                            <h3><a href="gallery.html">Dewey</a></h3>
+                                                            <time class="published" datetime="2015-10-08">Breed: Grey Tabby (Female)
+                                                            Birthday: May 30</time>
+                                                        </header> 
+                                                        <a href="gallery.html" class="image"><img src="images/pic11.jpg" alt="Dewey" /></a>
+                                                    </article>
+                                                </li>
+                                                <li>
+                                                    <article>
+                                                        <header>
+                                                            <h3><a href="gallery.html">Chawy</a></h3>
+                                                            <time class="published" datetime="2015-10-06">Breed: Brown Tabby (Male)
+                                                            Birthday: May 30</time>
+                                                        </header>
+                                                        <a href="gallery.html" class="image"><img src="images/pic12.jpg" alt="Chawy" /></a>
+                                                    </article>
+                                                </li>
+                                            </ul>
+                                        </section>
+            
+                                    <!-- About -->
+                                        <section class="blurb">
+                                            <h2>Opening Hours</h2>
+                                            <p>Weekdays: 11am - 7pm</p>
+                                            <p>Weekends: 12pm - 9pm</p>
+                                            <p>Closed on Public Holidays</p>
+                                            
+                                            <h2>Admission Fee</h2>
+                                            <p>Children (Age 5 and above) : $10/ per hour</p>
+                                            <p>Adult : $15/ per Hour</p>
+                                        </section>
+            
+                                    <!-- Footer -->
+                                        <section id="footer">
+                                            <ul class="icons">
+                                                <li><a href="https://www.facebook.com/" class="fa-facebook"><span class="label">Facebook</span></a></li>
+                                                <li><a href="https://www.instagram.com/?hl=en" class="fa-instagram"><span class="label">Instagram</span></a></li>
+                                            </ul>
+                                            <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">Little Tails Cat Cafe</a></p>
+                                        </section>
+            
+                                </section>
+            
+                        </div>
+            
+            <div class="sitemap-page-wrapper">
+                    <ul class="sitemap-column">
+                        <li class="sitemap-column-head sitemap-positions">Services</li>
+                        <li class="sitemap-column-data"><a href="adoption.html">Adoption Services</a></li>
+                        
+                    </ul>
+                    <ul class="sitemap-column">
+                        <li class="sitemap-column-head sitemap-employers">Admissions</li>
+                        <li class="sitemap-column-data"><a href="contact.html">Cat Cafe Admissions</a></li>
+                      
+                       
+                    </ul>
+                    <ul class="sitemap-column sitemap-students">
+                        <li class="sitemap-column-head">Cafe Rules</li>
+                        <li class="sitemap-column-data"><a href="rules.html">Rules and Regulations</a></li>
+                     
+                     </ul>
+                    <ul class="sitemap-column sitemap-universities">
+                        <li class="sitemap-column-head">Industry Partners</li>
+                        <li class="sitemap-column-data"><a href="http://petloverscentre.com/Forms/Index.aspx">Pet Lover's Centre</a></li>
+                        <li class="sitemap-column-data"><a href="http://catwelfare.org/">Cat Welfare Society</a></li>
+                        <li class="sitemap-column-data"><a href="https://www.friskies.com/">Purina Friskies</a></li>
+                       
+                    </ul>
+                    <ul class="sitemap-column sitemap-about">
+                        <li class="sitemap-column-head">Get in Touch</li>
+                        <li class="sitemap-column-data"><a href="index.html">Home</a></li>
+                        <li class="sitemap-column-data"><a href="contact.html">Contact Us</a></li>
+                     
+                    </ul>
+                    <ul class="sitemap-column sitemap-home">
+                       <li class="sitemap-column-head">Social Media</li>
+                        <li class="sitemap-column-data"><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                </div>
+		
                 <!-- Scripts -->
                     <script src="assets/js/jquery.min.js"></script>
                     <script src="assets/js/skel.min.js"></script>
                     <script src="assets/js/util.js"></script>
                     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
                     <script src="assets/js/main.js"></script>
-                    <script src="assets/js/treeview.js"></script>
+                    <!-- <script src="assets/js/treeview.js"></script> -->
                     <script>
                         function goBack() {
                           window.history.back();
