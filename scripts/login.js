@@ -19,9 +19,12 @@ app.controller('catCtrl', function ($scope, $http) {
             localStorage.setItem("username", $scope.formObj.username);
             if(arr[0].userStatus == "user")    
                 window.location.assign("customer.html"); 
-            else if (arr[0].userStatus == "admin")
+            else if (arr[0].userStatus == "admin"){
                 //Reroute to admin page
+                window.location.assign("admin.html"); 
                 console.log("To admin");
+            }
+                
             else
                 window.location.assign("customer.html"); 
         }
