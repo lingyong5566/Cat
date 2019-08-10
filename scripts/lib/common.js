@@ -1,5 +1,5 @@
 function serverURL() {
-    return "http://localhost:9988/api?"; // here to change DB
+    return "http://52.163.114.141:9988/api?"; // here to change DB
 }
 
 
