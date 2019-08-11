@@ -23,6 +23,20 @@ app.controller('catCtrl', function ($scope, $http) {
     var callback = function (arr){
         console.log("Results returned : " , arr);
         $scope.formObj = arr[0];
+
+        date = new Date($scope.formObj.dob);
+        year = date.getFullYear();
+        month = date.getMonth()+1;
+        dt = date.getDate();
+
+        if (dt < 10) {
+        dt = '0' + dt;
+        }
+        if (month < 10) {
+        month = '0' + month;
+        }
+
+        $scope.formObj.dob = date ;
         console.log("TCL: callback -> $scope.formObj", $scope.formObj);
         $scope.$apply();
     }
