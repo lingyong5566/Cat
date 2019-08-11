@@ -10,7 +10,7 @@
   <script type="text/javascript" src="scripts/lib/common.js"></script>
 
   <!-- Angular Script -->
-  <script type="text/javascript" src="scripts/modifyCat.js"></script>
+  <script type="text/javascript" src="scripts/adoption.js"></script>
 	<head>
     
 		<title>Cats Available for Adoption</title>
@@ -22,8 +22,8 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
-		<!-- Wrapper -->
+    <div ng-app="myApp" ng-controller="catCtrl" class="container">
+      <!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
@@ -334,6 +334,39 @@
       </li>
     </ul>
   </div>
+
+  <div ng-repeat="cat in catName">
+    <div class="card-header">
+      <img src="images/maya.jpg" height="430"/>
+    </div>
+    <div class="card-content">
+      <h3>{{ cat.name }}</h3>
+      <h4>{{ cat.desc }}</h4>
+      <table id="wobs-table2">
+        <tbody>
+          <tr>
+            <th>Age</th>
+            <td>{{ cat.age }}</td>
+          </tr>
+          <tr>
+            <th>Looking for</th>
+            <td>Adopt</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>{{ cat.gender }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer">
+      <ul>
+        <li>
+          <a href="registration.html"><i class="fa fa-github"></i><p>Adopt Me!</p></a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 								</article>
 									
@@ -477,6 +510,8 @@
 <li class="sitemap-column-data"><a href="gallery.html">Gallery</a></li>
 </ul>
 </div>
+    </div>
+		
 			
 
 		<!-- Scripts -->
